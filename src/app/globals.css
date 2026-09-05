@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0c1210;
+  --ink: #e8f0ea;
+  --muted: #8fa396;
+  --line: #24302a;
+  --mint: #3dff9a;
+  --card: #15201b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #163528 0%, transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, #1a2a22 0%, transparent 50%),
+    linear-gradient(180deg, #0c1210 0%, #0a0f0d 100%);
+  background-attachment: fixed;
+  font-family: var(--font-body), system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+.font-display {
+  font-family: var(--font-display), system-ui, sans-serif;
+}
+
+.mono {
+  font-family: var(--font-mono), ui-monospace, monospace;
+}
+
+.grid-noise {
+  background-image:
+    linear-gradient(rgba(61, 255, 154, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(61, 255, 154, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.card {
+  background: color-mix(in srgb, var(--card) 92%, transparent);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+}
+
+.btn-primary {
+  background: var(--mint);
+  color: #04140c;
+  font-weight: 700;
+  border-radius: 999px;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    filter 0.15s ease;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px -12px rgba(61, 255, 154, 0.65);
+}
+
+.btn-ghost {
+  border: 1px solid var(--line);
+  color: var(--ink);
+  border-radius: 999px;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.btn-ghost:hover {
+  border-color: #1f9a5c;
+  background: rgba(61, 255, 154, 0.06);
+}
+
+input,
+select,
+textarea {
+  background: #0e1613;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  border-radius: 12px;
+  outline: none;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #1f9a5c;
+  box-shadow: 0 0 0 3px rgba(61, 255, 154, 0.12);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rise {
+  animation: rise 0.55s ease both;
+}
+
+.rise-delay-1 {
+  animation-delay: 0.08s;
+  animation: rise 0.55s ease both;
+}
+.rise-delay-2 {
+  animation-delay: 0.16s;
+  animation: rise 0.55s ease both;
+}
+.rise-delay-3 {
+  animation-delay: 0.24s;
+  animation: rise 0.55s ease both;
+}
