@@ -50,7 +50,7 @@ export function analyzeDeal(input: DealInput): DealResult {
 
   const verdict =
     grade === "A"
-      ? "Buy this. Strong profit, good hourly rate, clears the 3× rule."
+      ? "Buy this. Strong profit, good hourly rate, clears the 3x rule."
       : grade === "B"
         ? "Solid flip. Take it if you can turn it fast."
         : grade === "C"
